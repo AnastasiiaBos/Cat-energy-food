@@ -1,6 +1,33 @@
 .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 17.39px;
   background-color: @basic-white;
-  margin-bottom: 17.4px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 1220px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
+}
+
+.page-header__logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 191px;
+
+  @media (min-width: @tablet-width) {
+    width: 174px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 202px;
+  }
 }
 
 .page-header__logo {

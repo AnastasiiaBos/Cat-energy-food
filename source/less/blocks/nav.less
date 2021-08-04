@@ -1,5 +1,23 @@
+.nav__toggle {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .nav__list {
+  display: none;
   .list-style-none ();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 440px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 478px;
+  }
 }
 
 .nav__item {
@@ -7,4 +25,8 @@
   font-weight: 500;
   line-height: 20px;
   color: @basic-black;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 30px;
 }
