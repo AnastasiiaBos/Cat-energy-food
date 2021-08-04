@@ -5,6 +5,15 @@
   background-repeat: no-repeat;
   padding-top: 27px;
   margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    background-image: none;
+    color: @basic-black;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @basic-black;
+  }
 }
 
 .promo__title {

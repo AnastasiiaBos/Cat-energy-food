@@ -10,8 +10,22 @@
 
 .scheme__list {
   .list-style-none ();
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px 153px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+  }
 }
 
 .scheme__item {
   .font-arial ();
+  margin-bottom: 24px;
 }
