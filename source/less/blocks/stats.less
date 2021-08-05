@@ -2,6 +2,21 @@
   background-color: @special-grey;
   padding-top: 27px;
   padding-bottom: 31px;
+
+  @media (min-width: @tablet-width) {
+    background-color: @basic-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @special-grey;
+  }
+}
+
+.stats .wrapper {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .stats__title {
@@ -15,8 +30,25 @@
   .text-style-none ();
 }
 
+.stats__container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .stats__list {
   .text-style-none ();
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats__item:not(:last-child) {
+  margin-right: 31px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 42px;
+  }
 }
 
 .stats__number {
@@ -37,4 +69,8 @@
 
 .stats__slider {
   .list-style-none ();
+
+  @media (min-width: @tablet-width) {
+    background-color: @special-grey;
+  }
 }

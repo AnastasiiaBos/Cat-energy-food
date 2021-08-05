@@ -7,9 +7,24 @@
   }
 }
 
+.contacts__container {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 41px;
+    padding-left: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 405px;
+    padding: 62.31px 89px 51.27px 76px;
+  }
+}
+
 .contacts__text {
   font-size: 16px;
-  line-height: 18px;
+  line-height: 20px;
   .text-style-none ();
 }
 

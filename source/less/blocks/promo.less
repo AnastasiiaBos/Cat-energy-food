@@ -1,10 +1,27 @@
 .promo {
   color: @basic-white;
-  background-image: url(../../img/cat-bg-mobile.jpg);
+  background-image: url("../img/cat-bg-mobile.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
   padding-top: 27px;
   margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    background-image: none;
+    color: @basic-black;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @basic-black;
+  }
+}
+
+.promo .wrapper {
+  display: grid;
+
+  @media (min-width: @desktop-width) {
+    width: 920px;
+  }
 }
 
 .promo__title {
@@ -20,7 +37,40 @@
   .text-style-none ();
 }
 
+
+.promo__button {
+  grid-row-start: 4;
+  grid-row-end: 5;
+
+  @media (min-width: @tablet-width) {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 244px;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: flex-start;
+  }
+}
+
 .promo__image {
   width: 280px;
   height: 270px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
 }

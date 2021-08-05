@@ -4,10 +4,29 @@
 
 .programs__list {
   .list-style-none ();
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .programs__item {
   background-color: @basic-light-grey;
+}
+
+.programs__item:not(:last-child) {
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 80px;
+  }
 }
 
 .programs__title {
