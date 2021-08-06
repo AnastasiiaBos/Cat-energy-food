@@ -3,6 +3,13 @@
   padding-bottom: 19px;
 }
 
+.catalog-additional__container {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .catalog-additional__title {
   .text-style-none ();
   font-size: 24px;
@@ -13,13 +20,46 @@
 .catalog-additional__list {
   .list-style-none ();
   border-top: 1px solid @basic-border;
+
+  @media (min-width: @tablet-width) {
+    min-width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 896px;
+  }
 }
 
 .catalog-additional__gift {
-  background-image: url("../img/gift-mobile.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 289px;
+  margin-top: 36px;
+  background-image: url("../img/gift-small.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
-  margin-top: 36px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    background-image: url("../img/gift-big.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 245px;
+    height: 289px;
+    margin: 0;
+    background-image: url("../img/gift-small.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .catalog-additional__gift-text {

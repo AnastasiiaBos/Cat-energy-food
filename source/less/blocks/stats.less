@@ -9,6 +9,8 @@
 
   @media (min-width: @desktop-width) {
     background-color: @special-grey;
+    box-shadow: inset 0 195px @basic-white;
+    padding-top: 0;
   }
 }
 
@@ -67,10 +69,18 @@
   text-transform: uppercase;
 }
 
-.stats__slider {
-  .list-style-none ();
-
+.stats__slider-container {
   @media (min-width: @tablet-width) {
     background-color: @special-grey;
+    box-shadow: inset 0 191px @basic-white;
   }
+
+  @media (min-width: @desktop-width) {
+    background-color: @special-grey;
+    box-shadow: inset 0 195px @basic-white;
+  }
+}
+
+.stats__slider {
+  .list-style-none ();
 }
