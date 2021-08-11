@@ -88,6 +88,7 @@
 
   @media (min-width: @desktop-width) {
     width: 478px;
+    background-color: transparent;
   }
 }
 
@@ -103,6 +104,10 @@
     padding: 0;
     border: none;
     display: inline-block;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @basic-white;
   }
 }
 
@@ -132,7 +137,7 @@
         bottom: -10px;
         left: 0;
         height: 2px;
-        background: @basic-green;
+        background-color: @basic-green;
       }
     }
   }
@@ -141,11 +146,9 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 29.64px;
+
+    &::after {
+      background-color: @basic-white;
+    }
   }
 }
-
-// .nav__item:not(:last-child) {
-//   @media (min-width: @tablet-width) {
-//     margin-right: 30px;
-//   }
-// }
