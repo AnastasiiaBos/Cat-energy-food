@@ -1,13 +1,24 @@
 .page-header {
   padding-top: 10px;
-  padding-bottom: 17.39px;
+
+  // разобраться с лого и поменять паддинги
+
+  @media (min-width: @tablet-width) {
+    padding-top: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 66px;
+  }
 }
 
 .page-header .wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: @basic-white;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
 
 .page-header__logo-container {
@@ -15,9 +26,12 @@
   justify-content: space-between;
   align-items: center;
   width: 191px;
+  padding-bottom: 17.39px;
+  background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
     width: 174px;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
