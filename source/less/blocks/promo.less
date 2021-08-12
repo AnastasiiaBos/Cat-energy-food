@@ -9,6 +9,7 @@
   @media (min-width: @tablet-width) {
     background-image: none;
     color: @basic-black;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -75,7 +76,8 @@
 .promo__button {
   grid-row-start: 4;
   grid-row-end: 5;
-  padding: 7px 7px;
+  margin-top: 2px;
+  padding: 12px 7px;
 
 
   @media (min-width: @tablet-width) {
@@ -102,13 +104,15 @@
 .promo__image {
   width: 280px;
   height: 270px;
-  margin: 0 auto;
+  // margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     grid-row-start: 3;
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
+    width: 709px;
+    height: 609px;
   }
 
   @media (min-width: @desktop-width) {
@@ -116,5 +120,7 @@
     grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 3;
+    width: 552px;
+    height: 499px;
   }
 }

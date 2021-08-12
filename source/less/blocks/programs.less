@@ -127,10 +127,8 @@
   border-bottom: 1px solid @special-border-list-mobile;
 
   @media (min-width: @tablet-width) {
-    font-size: 16px;
-    line-height: 24px;
     margin: 0;
-    padding: 0 316px 48px 52px;
+    padding: 0 316px 52px 52px;
     border: none;
   }
 
@@ -148,7 +146,7 @@
 .programs__button {
   display: inline-block;
   position: relative;
-  margin: 15px 10px 18px 19px;
+  margin: 19px 10px 23px 19px;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
@@ -167,11 +165,15 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    margin: 0 316px 53px 52px;
+    margin: 0 316px 58px 52px;
 
     &::after {
       top: 10px;
       left: 133px;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 5px;
   }
 }
