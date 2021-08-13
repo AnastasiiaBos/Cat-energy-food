@@ -9,10 +9,12 @@
   @media (min-width: @tablet-width) {
     background-image: none;
     color: @basic-black;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
-    color: @basic-black;
+    padding-top: 36px;
+    margin-bottom: 82px;
   }
 }
 
@@ -20,7 +22,9 @@
   display: grid;
 
   @media (min-width: @desktop-width) {
-    width: 920px;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 80px;
+    width: 960px;
   }
 }
 
@@ -29,42 +33,86 @@
   font-weight: 400;
   line-height: 36px;
   .text-style-none ();
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    padding-top: 40px;
+    padding-left: 87px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 82px;
+    padding-left: 0;
+  }
 }
 
 .promo__slogan {
   line-height: 14px;
   text-transform: uppercase;
   .text-style-none ();
-}
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 29px;
 
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 41px;
+    padding-bottom: 20px;
+    padding-left: 89px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 40px;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+}
 
 .promo__button {
   grid-row-start: 4;
   grid-row-end: 5;
+  margin-top: 2px;
+  padding: 12px 7px;
+
 
   @media (min-width: @tablet-width) {
+    z-index: 10;
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 2;
     width: 244px;
+    margin-top: 29px;
+    margin-left: 91px;
+    padding: 17px 15px;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @media (min-width: @desktop-width) {
-    align-self: flex-start;
+    margin-top: 52px;
+    margin-left: 0;
+    margin-bottom: 185px;
   }
 }
 
 .promo__image {
   width: 280px;
   height: 270px;
-  margin: 0 auto;
+  // margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     grid-row-start: 3;
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
+    width: 709px;
+    height: 609px;
   }
 
   @media (min-width: @desktop-width) {
@@ -72,5 +120,7 @@
     grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 3;
+    width: 552px;
+    height: 499px;
   }
 }

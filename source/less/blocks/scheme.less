@@ -1,11 +1,27 @@
 .scheme {
-  margin-bottom: 42px;
+  margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid @special-grey;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    border: none;
+  }
 }
 
 .scheme__title {
   font-size: 36px;
   line-height: 40px;
   .text-style-none ();
+  margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 42px;
+  }
 }
 
 .scheme__list {
@@ -14,18 +30,93 @@
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 37px 153px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 89%;
+    counter-reset: number;
   }
 
   @media (min-width: @desktop-width) {
+    width: 100%;
     grid-template-columns: repeat(4, 245px);
     column-gap: 80px;
   }
 }
 
 .scheme__item {
+  position: relative;
   .font-arial ();
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  padding-left: 80px;
+  min-height: 60px;
+
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    align-items: center;
+
+    br {
+      display: none;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-color: @basic-green;
+    background-position: center;
+  }
+
+  &--first::before {
+    background-image: url("../img/scheme-1.svg");
+  }
+
+  &--second::before {
+    background-image: url("../img/scheme-2.svg");
+  }
+
+  &--third::before {
+    background-image: url("../img/scheme-3.svg");
+  }
+
+  &--fourth::before {
+    background-image: url("../img/scheme-4.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: 245px;
+    min-height: 115px;
+    margin-bottom: 60px;
+    margin-top: 30px;
+    padding-left: 0;
+    padding-top: 111px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      position: absolute;
+      top: -40px;
+      left: 115px;
+      background-repeat: no-repeat;
+      counter-increment: number;
+      content: counter(number);
+      z-index: -1;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      color: @basic-light-grey;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 25px;
+  }
 }
