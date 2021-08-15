@@ -1,10 +1,17 @@
 .form {
+  @media (min-width: @desktop-width) {
+    max-width: 1220px;
+  }
+}
+
+.form__container {
   @media (min-width: @tablet-width) {
-    max-width: 630px;
+    margin-left: 40px;
+    margin-right: 37px;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 1220px;
+    margin: 0;
   }
 }
 
@@ -26,6 +33,11 @@
   .text-style-none ();
   font-size: 24px;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .form__list {
@@ -48,22 +60,16 @@
 }
 
 .form__label {
-  font-size: 16px;
   margin-right: 13px;
+  font-size: 16px;
   text-transform: uppercase;
   color: @basic-dark-grey;
-}
 
-.form__input {
-  flex-grow: 1;
-  padding: 13.2px 15.1px;
-}
-
-.form__textarea {
-  box-sizing: border-box;
-  width: 100%;
-  height: 150px;
-  padding: 9px 15px 9px 12px;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: 18px;
+  }
 }
 
 .form__input,
@@ -75,26 +81,48 @@
   text-transform: uppercase;
   color: @basic-dark-grey;
   border: 1px solid @special-border-desktop;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.form__input {
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 13.2px 14px;
+
+  @media (min-width: @tablet-width) {
+    padding: 10.6px 19px;
+  }
 }
 
 .form__general-info {
-  padding-bottom: 24px;
+  margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 72px;
+  }
 
   @media (min-width: @desktop-width) {
+    margin: 0;
     padding: 0;
     border: none;
   }
 }
 
 .form__product-type {
-  padding-top: 27px;
-  padding-bottom: 24px;
-  margin-right: -20px;
-  margin-left: -20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 0 -20px;
+  padding: 27px 20px 24px 20px;
   border-top: 1px solid @basic-border;
   border-bottom: 1px solid @basic-border;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+    border: 1px solid @special-border-desktop;
+  }
 
   @media (min-width: @desktop-width) {
     padding: 0;
@@ -102,8 +130,22 @@
   }
 }
 
+.form__product-type .form__list {
+  @media (min-width: @tablet-width) {
+    margin: 27px 0 30px 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 29px;
+  }
+}
+
 .form__product-type .form__item:not(:last-child) {
   margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 24px;
+  }
 }
 
 .form__product-type .form__label {
@@ -113,6 +155,10 @@
   cursor: pointer;
   user-select: none;
   color: @basic-grey;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
 }
 
 .form__input-radio + label::before {
@@ -124,6 +170,11 @@
   height: 27px;
   border: 1px solid @special-border;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 38px;
+    height: 38px;
+  }
 }
 
 .form__input-radio:checked + label::after {
@@ -135,27 +186,50 @@
   height: 13.5px;
   background-color: @special-bg-green;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: 6px;
+    left: 11px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .form__contacts {
   position: relative;
   margin-top: 27px;
   margin-bottom: 23.57px;
-  margin-left: -20px;
-  margin-right: -20px;
-  padding-left: 20px;
-  padding-right: 20px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -70px;
-    left: 20px;
-    right: -20px;
-    width: 100%;
-    height: 2px;
-    background-color: @special-bg-green;
-    z-index: -1;
+  @media (min-width: @tablet-width) {
+    margin-top: 71px;
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 68px;
+  }
+}
+
+.form__contacts::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  left: 20px;
+  right: -20px;
+  width: 100%;
+  height: 2px;
+  background-color: @special-bg-green;
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    width: 100vw;
+    top: -88px;
+    left: -30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -90px;
+    left: -110px;
   }
 }
 
@@ -164,10 +238,40 @@
   margin-bottom: 35px;
   padding-right: 14px;
   background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    max-width: 512px;
+    margin-bottom: 77px;
+    padding-right: 42px;
+    padding-left: 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 512px;
+    margin-left: -40px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.form__contacts .form__list {
+  @media (min-width: @tablet-width) {
+    margin-left: 41px;
+    margin-right: 35px;
+  }
+
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .form__contacts .form__item {
   position: relative;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .form__icon {
@@ -178,6 +282,15 @@
     right: 15px;
     width: 18px;
     height: 13px;
+
+    @media (min-width: @tablet-width) {
+      top: 20px;
+      right: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 18px;
+    }
   }
 
   &--tel {
@@ -185,27 +298,48 @@
     right: 14px;
     width: 20px;
     height: 20px;
+
+    @media (min-width: @tablet-width) {
+      top: 17px;
+      right: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 15px;
+      right: 18px;
+    }
   }
 }
 
 .form__comments {
   position: relative;
   margin-bottom: 22.75px;
-  margin-left: -20px;
-  margin-right: -20px;
-  padding-left: 20px;
-  padding-right: 20px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -50px;
-    left: 20px;
-    right: -20px;
-    width: 100%;
-    height: 2px;
-    background-color: @special-bg-green;
-    z-index: -1;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+  }
+}
+
+.form__comments::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 20px;
+  right: -20px;
+  width: 100%;
+  height: 2px;
+  background-color: @special-bg-green;
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    width: 100vw;
+    top: -90px;
+    left: -30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -92px;
+    left: -110px;
   }
 }
 
@@ -214,26 +348,74 @@
   margin-bottom: 38px;
   padding-right: 22px;
   background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    max-width: 182px;
+    margin-bottom: 76px;
+    padding-right: 38px;
+    padding-left: 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 182px;
+    margin-bottom: 78px;
+    margin-left: -40px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.form__textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 150px;
+  padding: 9px 15px 9px 12px;
+
+  @media (min-width: @tablet-width) {
+    width: 89%;
+    height: 174px;
+    margin-left: 40px;
+    padding: 10px 19px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .form__additions {
   position: relative;
   margin-bottom: 41px;
-  margin-left: -20px;
-  margin-right: -20px;
-  padding-left: 20px;
-  padding-right: 20px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -50px;
-    left: 20px;
-    right: -20px;
-    width: 100%;
-    height: 2px;
-    background-color: @special-bg-green;
-    z-index: -1;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 68px;
+  }
+}
+
+.form__additions::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 20px;
+  right: -20px;
+  width: 100%;
+  height: 2px;
+  background-color: @special-bg-green;
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    width: 100vw;
+    top: -75px;
+    left: -30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: -110px;
   }
 }
 
@@ -242,24 +424,45 @@
   margin-bottom: 38px;
   padding-right: 23px;
   background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    max-width: 211px;
+    margin-bottom: 62px;
+    padding-right: 41px;
+    padding-left: 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 212px;
+    margin-left: -40px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .form__additions .form__list {
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 60px;
+    column-gap: 20px;
+    row-gap: 42px;
+    margin-left: 40px;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 80px;
+    margin-left: 0;
   }
 }
 
 .form__additions .form__item:not(:last-child) {
   margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .form__additions .form__label {
@@ -269,27 +472,44 @@
   cursor: pointer;
   user-select: none;
   color: @basic-black;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
 }
 
 .form__input-checkbox + label::before {
   content: "";
   position: absolute;
-  left: 0;
   top: -5px;
+  left: 0;
   width: 28px;
   height: 28px;
   border: 1px solid @special-border;
+
+  @media (min-width: @tablet-width) {
+    width: 38px;
+    height: 38px;
+  }
 }
 
 .form__input-checkbox:checked + label::after {
   content: "";
   position: absolute;
-  left: 6px;
   top: 3px;
+  left: 6px;
   width: 18px;
   height: 14px;
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 6px;
+    left: 8px;
+    width: 24px;
+    height: 20px;
+    background-size: 24px 20px;
+  }
 }
 
 .form__bottom-container {
@@ -297,23 +517,31 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
+    margin: 0 37px 0 40px;
   }
 
   @media (min-width: @desktop-width) {
     column-gap: 80px;
+    margin: 0;
   }
 }
 
 .form__button {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 10px 44px;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   border: none;
-  padding: 10px 44px;
-  margin: 0;
-  margin-bottom: 20px;
-  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 15px 45px;
+    font-size: 20px;
+  }
 }
 
 .form__note {
@@ -324,5 +552,6 @@
 
   @media (min-width: @tablet-width) {
     justify-self: flex-start;
+    align-self: center;
   }
 }
