@@ -9,8 +9,8 @@
   <body class="page__body">
     <header class="page-header">
       <div class="wrapper">
-        <div class="page-header__logo-container" href="index.html">
-          <a class="page-header__logo">
+        <div class="page-header__logo-container">
+          <a class="page-header__logo" href="index.html">
             <img src="img/logo-mobile.svg" width="34" height="38" alt="Логотип интернет-магазина «Кэт энерджи»">
           </a>
           <!-- разобраться c лого в разных версиях -->
@@ -18,15 +18,15 @@
             <img src="img/logo-mobile-name.svg" width="101" height="18" alt="Кэт энерджи">
           </a>
         </div>
-        <nav class="page-header__nav nav">
+        <nav class="page-header__nav nav nav--closed nav--nojs">
           <button class="nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="nav__list">
-            <li class="nav__item nav__item--current">
+            <li class="nav__item">
               <a href="index.html">Главная</a>
             </li>
-            <li class="nav__item">
+            <li class="nav__item nav__item--current">
               <a>Каталог продукции</a>
             </li>
             <li class="nav__item">
@@ -439,5 +439,22 @@
         </div>
       </section>
     </footer>
+
+    <script>
+      var navMain = document.querySelector('.nav');
+      var navToggle = document.querySelector('.nav__toggle');
+
+      navMain.classList.remove('nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('nav--closed')) {
+          navMain.classList.remove('nav--closed');
+          navMain.classList.add('nav--opened');
+        } else {
+          navMain.classList.add('nav--closed');
+          navMain.classList.remove('nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>
