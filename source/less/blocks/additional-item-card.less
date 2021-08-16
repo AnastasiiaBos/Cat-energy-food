@@ -1,7 +1,7 @@
 .additional-item-card {
   border-bottom: 1px solid @basic-border;
   padding-top: 13px;
-  padding-bottom: 19px;
+  padding-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -19,8 +19,10 @@
 
 .additional-item-card__title {
   .text-style-none ();
+  margin-bottom: 13px;
   font-size: 16px;
   line-height: 16px;
+  text-transform: uppercase;
 }
 
 .additional-item-card__description {
@@ -55,6 +57,10 @@
 
 .additional-item-card__button {
   width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;

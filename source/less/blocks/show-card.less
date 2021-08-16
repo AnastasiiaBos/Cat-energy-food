@@ -1,26 +1,54 @@
 .show-card {
+  position: relative;
   padding-top: 78px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 38px;
+    width: 30px;
+    height: 2px;
+    background-color: @plus-catalog;
+    // transform: rotate(-180deg);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 24px;
+    width: 2px;
+    height: 30px;
+    background-color: @plus-catalog;
+  }
 }
 
 .show-card__title {
   .text-style-none ();
+  margin-bottom: 8px;
   font-size: 16px;
   line-height: 20px;
+  text-transform: uppercase;
   color: @special-black;
 }
 
 .show-card__text {
   .font-arial ();
   .text-style-none ();
+  margin-bottom: 21px;
   font-size: 12px;
   line-height: 16px;
 }
 
 .show-card__button {
+  align-self: stretch;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
   background-color: @basic-light-grey;
   color: @basic-dark-grey;
-  text-transform: uppercase;
 }
