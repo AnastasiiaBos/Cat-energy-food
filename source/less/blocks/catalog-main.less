@@ -12,6 +12,16 @@
   margin-bottom: 41px;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin: 42px 37px 82px 0;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 58px;
+  }
 }
 
 .catalog-main__list {
@@ -27,6 +37,7 @@
     flex-wrap: wrap;
     width: 708px;
     margin: 0 auto;
+    padding: 0;
     border: none;
   }
 
@@ -42,15 +53,18 @@
   border-bottom: 1px solid @basic-border;
 
   @media (min-width: @tablet-width) {
+    width: 324px;
+    margin: 0;
+    padding: 0;
     margin-right: 60px;
     margin-bottom: 60px;
-    width: 324px;
+    border: none;
   }
 
   @media (min-width: @desktop-width) {
+    width: 245px;
     margin-right: 80px;
     margin-bottom: 63px;
-    width: 245px;
   }
 }
 

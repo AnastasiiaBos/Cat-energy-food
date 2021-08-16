@@ -3,6 +3,16 @@
   padding-top: 25px;
   padding-bottom: 35px;
 
+  @media (min-width: @tablet-width) {
+    padding-top: 5px;
+    padding-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 10px;
+    padding-bottom: 86px;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -13,6 +23,16 @@
     height: 2px;
     background-color: @special-bg-green;
     z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      top: 26px;
+      left: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 32px;
+      left: 0;
+    }
   }
 }
 
@@ -31,6 +51,20 @@
   font-size: 24px;
   line-height: 24px;
   background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    max-width: 338px;
+    margin-bottom: 80px;
+    padding: 0 36px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 35px;
+    margin-left: -40px;
+    padding-left: 40px;
+  }
 }
 
 .catalog-additional__list {
@@ -39,10 +73,14 @@
 
   @media (min-width: @tablet-width) {
     min-width: 708px;
+    border-right: 1px solid @basic-border;
+    border-left: 1px solid @basic-border;
   }
 
   @media (min-width: @desktop-width) {
     width: 896px;
+    border-right: none;
+    border-left: none;
   }
 }
 
@@ -59,7 +97,8 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    flex-direction: row;
+    min-height: 200px;
+    margin-top: 71px;
     background-image: url("../img/gift-big.jpg");
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -83,11 +122,20 @@
   position: absolute;
   content: "";
   top: 59px;
-  // left: 50%-20px;
   width: 78px;
   height: 80px;
   background-image: url("../img/gift.svg");
   background-position: top center;
+
+  @media (min-width: @tablet-width) {
+    top: 58px;
+    left: 79px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 58px;
+    left: 85px;
+  }
 }
 
 .catalog-additional__gift-text {
@@ -98,4 +146,18 @@
   line-height: 20px;
   text-align: center;
   color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    max-width: 161px;
+    text-align: left;
+    margin-top: 71px;
+    margin-right: 124px;
+    margin-left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    margin-top: 185px;
+    text-align: center;
+  }
 }
