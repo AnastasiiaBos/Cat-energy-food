@@ -12,6 +12,25 @@
   }
 }
 
+.page-header-bg {
+  @media (min-width: @desktop-width) {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 694px;
+      background:  linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)) center left repeat,
+        url("../img/index-bg.jpg") center left no-repeat,
+        linear-gradient(@special-bg-grey, @special-bg-grey) center left repeat;
+      z-index: -2;
+    }
+  }
+}
+
 .page-header .wrapper {
   @media (min-width: @tablet-width) {
     display: flex;
