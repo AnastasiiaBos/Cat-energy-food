@@ -1,8 +1,8 @@
 .promo {
   color: @basic-white;
-  background-image: url("../img/cat-bg-mobile.jpg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
+  background:  linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)) top left / 100% 302px no-repeat,
+    url("../img/index-bg.jpg") top center / auto 302px no-repeat,
+    linear-gradient(@special-bg-grey, @special-bg-grey) top left / 100% 302px no-repeat;
   padding-top: 27px;
   margin-bottom: 22px;
 
@@ -44,6 +44,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 415px;
     padding-top: 82px;
     padding-left: 0;
   }

@@ -20,13 +20,12 @@
       content: "";
       position: absolute;
       top: 0;
-      left: 50%;
-      width: 720px;
-      // width: 100%;
+      right: 0;
+      width: 50%;
       height: 694px;
-      background-image: url("../img/cat-bg-desktop.jpg");
-      // background-color: @special-bg-green;
-      background-repeat: no-repeat;
+      background:  linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)) center left repeat,
+        url("../img/index-bg.jpg") center left no-repeat,
+        linear-gradient(@special-bg-grey, @special-bg-grey) center left repeat;
       z-index: -2;
     }
   }
