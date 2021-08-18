@@ -1,14 +1,12 @@
 .page-header {
   padding-top: 10px;
 
-  // разобраться с лого и поменять паддинги
-
   @media (min-width: @tablet-width) {
-    padding-top: 34px;
+    padding-top: 24px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 66px;
+    padding-top: 55px;
   }
 }
 
@@ -40,30 +38,56 @@
   }
 }
 
-.page-header__logo-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.page-header__nav {
+  @media (min-width: @tablet-width) {
+    padding-top: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
+}
+
+
+// .page-header__logo-container {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   width: 191px;
+//   padding-bottom: 17.39px;
+//   background-color: @basic-white;
+
+//   @media (min-width: @tablet-width) {
+//     width: 174px;
+//     padding-bottom: 0;
+//   }
+
+//   @media (min-width: @desktop-width) {
+//     width: 202px;
+//   }
+// }
+
+// .page-header__logo {
+//   width: 34px;
+//   height: 38px;
+// }
+
+// .page-header__logo-name {
+//   width: 101px;
+//   height: 18px;
+// }
+
+.page-header__logo {
   width: 191px;
-  padding-bottom: 17.39px;
-  background-color: @basic-white;
+  height: 38px;
 
   @media (min-width: @tablet-width) {
     width: 174px;
-    padding-bottom: 0;
+    height: 52px;
   }
 
   @media (min-width: @desktop-width) {
     width: 202px;
+    height: 59px;
   }
-}
-
-.page-header__logo {
-  width: 34px;
-  height: 38px;
-}
-
-.page-header__logo-name {
-  width: 101px;
-  height: 18px;
 }
