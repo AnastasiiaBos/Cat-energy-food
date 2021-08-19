@@ -22,9 +22,15 @@
       width: 50%;
       height: 694px;
       background:  linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)) center left repeat,
-        url("../img/index-bg.jpg") center left no-repeat,
+        url("../img/index-bg-desktop.jpg") center left no-repeat,
         linear-gradient(@special-bg-grey, @special-bg-grey) center left repeat;
       z-index: -2;
+
+      @media (min-resolution: 2dppx) {
+        background:  linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)) center left repeat,
+          url("../img/index-bg-desktop@2x.jpg") center left/ auto 694px no-repeat,
+          linear-gradient(@special-bg-grey, @special-bg-grey) center left repeat;
+      }
     }
   }
 }
@@ -48,36 +54,8 @@
   }
 }
 
-
-// .page-header__logo-container {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   width: 191px;
-//   padding-bottom: 17.39px;
-//   background-color: @basic-white;
-
-//   @media (min-width: @tablet-width) {
-//     width: 174px;
-//     padding-bottom: 0;
-//   }
-
-//   @media (min-width: @desktop-width) {
-//     width: 202px;
-//   }
-// }
-
-// .page-header__logo {
-//   width: 34px;
-//   height: 38px;
-// }
-
-// .page-header__logo-name {
-//   width: 101px;
-//   height: 18px;
-// }
-
-.page-header__logo {
+.page-header__logo,
+.page-header__logo-img {
   width: 191px;
   height: 38px;
 

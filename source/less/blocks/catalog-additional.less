@@ -91,17 +91,29 @@
   align-items: center;
   min-height: 289px;
   margin-top: 36px;
-  background:  linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)) top left / 100% 289px no-repeat,
-    url("../img/catalog-bg-small.jpg") top center / auto 289px no-repeat,
+  background: linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)) top left / 100% 289px no-repeat,
+    url("../img/catalog-bg-mobile.jpg") top center / auto 289px no-repeat,
     linear-gradient(@special-bg-grey, @special-bg-grey) top left / 100% 289px no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background: linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)) top left / 100% 289px no-repeat,
+      url("../img/catalog-bg-mobile@2x.jpg") top center / auto 289px no-repeat,
+      linear-gradient(@special-bg-grey, @special-bg-grey) top left / 100% 289px no-repeat;
+  }
 
   @media (min-width: @tablet-width) {
     display: flex;
     min-height: 200px;
     margin-top: 71px;
     background:  linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)) top left / 100% 200px no-repeat,
-      url("../img/catalog-bg-big.jpg") top center / auto 200px no-repeat,
+      url("../img/catalog-bg-tablet.jpg") top center / auto 200px no-repeat,
       linear-gradient(@special-bg-grey, @special-bg-grey) top left / 100% 200px no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background:  linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)) top left / 100% 200px no-repeat,
+        url("../img/catalog-bg-tablet@2x.jpg") top center / auto 200px no-repeat,
+        linear-gradient(@special-bg-grey, @special-bg-grey) top left / 100% 200px no-repeat;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -112,8 +124,14 @@
     height: 289px;
     margin: 0;
     background:  linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)) top left / 100% 289px no-repeat,
-      url("../img/catalog-bg-small.jpg") top center / auto 289px no-repeat,
+      url("../img/catalog-bg-desktop.jpg") top center / auto 289px no-repeat,
       linear-gradient(@special-bg-grey, @special-bg-grey) top left / 100% 289px no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background:  linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)) top left / 100% 289px no-repeat,
+        url("../img/catalog-bg-desktop@2x.jpg") top center / auto 289px no-repeat,
+        linear-gradient(@special-bg-grey, @special-bg-grey) top left / 100% 289px no-repeat;
+    }
   }
 }
 

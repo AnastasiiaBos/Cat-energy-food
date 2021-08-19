@@ -1,10 +1,16 @@
 .promo {
-  color: @basic-white;
-  background:  linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)) top left / 100% 302px no-repeat,
-    url("../img/index-bg.jpg") top center / auto 302px no-repeat,
-    linear-gradient(@special-bg-grey, @special-bg-grey) top left / 100% 302px no-repeat;
-  padding-top: 27px;
   margin-bottom: 22px;
+  padding-top: 27px;
+  background:  linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)) top left / 100% 302px no-repeat,
+    url("../img/index-bg-mobile.jpg") 65% 0/ auto 302px no-repeat,
+    linear-gradient(@special-bg-grey, @special-bg-grey) top left / 100% 302px no-repeat;
+  color: @basic-white;
+
+  @media (min-resolution: 2dppx) {
+    background:  linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)) top left / 100% 302px no-repeat,
+      url("../img/index-bg-mobile@2x.jpg") 65% 0/ auto 302px no-repeat,
+      linear-gradient(@special-bg-grey, @special-bg-grey) top left / 100% 302px no-repeat;
+  }
 
   @media (min-width: @tablet-width) {
     background-image: none;
@@ -18,7 +24,7 @@
   }
 }
 
-.promo .wrapper {
+.promo__container {
   display: grid;
 
   @media (min-width: @desktop-width) {
@@ -105,7 +111,6 @@
 .promo__image {
   width: 280px;
   height: 270px;
-  // margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     grid-row-start: 3;
@@ -123,5 +128,6 @@
     grid-column-end: 3;
     width: 552px;
     height: 499px;
+    transform: translate(-9%, -2%);
   }
 }
