@@ -84,4 +84,14 @@
   text-transform: uppercase;
   background-color: @basic-light-grey;
   color: @basic-dark-grey;
+
+  &:hover,
+  &:focus {
+    background-color: @grey-hover;
+  }
+
+  &:active {
+    background-color: @grey-hover;
+    color: fade(@basic-dark-grey, 30%);
+  }
 }

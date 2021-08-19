@@ -28,6 +28,16 @@ img {
   color: @basic-white;
   text-transform: uppercase;
   text-align: center;
+
+  &:hover,
+  &:focus {
+    background-color: @green-hover;
+  }
+
+  &:active {
+    background-color: @green-hover;
+    color: fade(@basic-white, 30%);
+  }
 }
 
 .wrapper {

@@ -25,11 +25,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 15px;
+    padding-bottom: 25px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 25px;
+    padding-bottom: 20px;
   }
 }
 
@@ -38,6 +39,15 @@
   height: 24px;
   margin-top: 40px;
   margin-bottom: 30px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer__copyright {
@@ -56,4 +66,13 @@
     justify-self: end;
     margin-right: 0;
   }
+}
+
+.page-footer__copyright:focus path,
+.page-footer__copyright:hover path {
+  fill: @basic-green;
+}
+
+.page-footer__copyright:active {
+  opacity: 0.3;
 }

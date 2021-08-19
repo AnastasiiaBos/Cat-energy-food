@@ -117,15 +117,27 @@
   }
 }
 
-.nav__list-white a {
-  @media (min-width: @desktop-width) {
-    color: @basic-white;
-  }
-}
-
 .nav__list-white .nav__item--current::after {
   @media (min-width: @desktop-width) {
     background-color: @basic-white;
+  }
+}
+
+.nav__list a:hover,
+.nav__list a:focus,
+.nav__list-white a:hover,
+.nav__list-white a:focus {
+  opacity: 0.6;
+}
+
+.nav__list a:active,
+.nav__list-white a:active {
+  opacity: 0.3;
+}
+
+.nav__list-white a {
+  @media (min-width: @desktop-width) {
+    color: @basic-white;
   }
 }
 
