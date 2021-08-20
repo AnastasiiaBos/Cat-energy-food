@@ -1,14 +1,12 @@
 .page-header {
   padding-top: 10px;
 
-  // разобраться с лого и поменять паддинги
-
   @media (min-width: @tablet-width) {
-    padding-top: 34px;
+    padding-top: 24px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 66px;
+    padding-top: 55px;
   }
 }
 
@@ -24,9 +22,15 @@
       width: 50%;
       height: 694px;
       background:  linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)) center left repeat,
-        url("../img/index-bg.jpg") center left no-repeat,
+        url("../img/index-bg-desktop.jpg") center left no-repeat,
         linear-gradient(@special-bg-grey, @special-bg-grey) center left repeat;
       z-index: -2;
+
+      @media (min-resolution: 2dppx) {
+        background:  linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)) center left repeat,
+          url("../img/index-bg-desktop@2x.jpg") center left/ auto 694px no-repeat,
+          linear-gradient(@special-bg-grey, @special-bg-grey) center left repeat;
+      }
     }
   }
 }
@@ -40,30 +44,37 @@
   }
 }
 
-.page-header__logo-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.page-header__nav {
+  @media (min-width: @tablet-width) {
+    padding-top: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
+}
+
+.page-header__logo,
+.page-header__logo-img {
   width: 191px;
-  padding-bottom: 17.39px;
-  background-color: @basic-white;
+  height: 38px;
 
   @media (min-width: @tablet-width) {
     width: 174px;
-    padding-bottom: 0;
+    height: 52px;
   }
 
   @media (min-width: @desktop-width) {
     width: 202px;
+    height: 59px;
   }
 }
 
-.page-header__logo {
-  width: 34px;
-  height: 38px;
+.page-header__logo-state:hover,
+.page-header__logo-state:focus {
+  opacity: 0.8;
 }
 
-.page-header__logo-name {
-  width: 101px;
-  height: 18px;
+.page-header__logo-state:active {
+  opacity: 0.6;
 }
