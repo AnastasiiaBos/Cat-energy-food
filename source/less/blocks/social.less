@@ -22,27 +22,32 @@
 }
 
 @media (min-width: @tablet-width) {
-  .social__link--vkontakte svg {
+  .social__icon--vkontakte {
     width: 30px;
     height: 22px;
   }
 
-  .social__link--instagram svg {
+  .social__icon--instagram {
     width: 23px;
     height: 23px;
   }
 
-  .social__link--facebook svg {
+  .social__icon--facebook {
     width: 18px;
     height: 30px;
   }
 }
 
-.social__link:focus path,
-.social__link:hover path {
+.social__icon--facebook {
+  fill: none;
+  stroke: @stroke-link-fb;
+}
+
+.social__link:focus .social__icon,
+.social__link:hover .social__icon {
   stroke: @basic-green;
 }
 
-.social__link:active path {
+.social__icon:active {
   opacity: 0.3;
 }

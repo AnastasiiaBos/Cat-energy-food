@@ -68,8 +68,17 @@
   }
 }
 
-.page-footer__copyright:focus path,
-.page-footer__copyright:hover path {
+.page-footer__copyright-icon {
+  fill: @stroke-link-fb;
+}
+
+.page-footer__copyright-icon:hover,
+.page-footer__copyright-icon:focus {
+  fill: @basic-green;
+}
+
+.page-footer__copyright:hover .page-footer__copyright-icon,
+.page-footer__copyright:focus .page-footer__copyright-icon {
   fill: @basic-green;
 }
 
