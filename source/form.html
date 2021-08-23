@@ -49,75 +49,73 @@
           </p>
         </div>
         <form class="main-form__form form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="wrapper">
-           <div class="form__container">
-              <fieldset class="form__fieldset form__general-info">
-                <legend class="visually-hidden">Имя, возраст и вес кота</legend>
-                <ul class="form__list">
-                  <li class="form__item">
-                    <label class="form__label" for="cat-name">Имя:*</label>
-                    <input class="form__input" id="cat-name" type="text" name="cat-name" placeholder="Барсик" required>
-                  </li>
-                  <li class="form__item">
-                    <label class="form__label" for="cat-weight">Вес (кг):*</label>
-                    <input class="form__input" id="cat-weight" type="number" name="cat-weight" min="0" max="100" placeholder="7" required>
-                  </li>
-                  <li class="form__item">
-                    <label class="form__label" for="cat-age">Возраст (лет):</label>
-                    <input class="form__input" id="cat-age" type="number" name="cat-age"  min="0" max="100" placeholder="7">
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="form__fieldset form__product-type">
-                <legend class="visually-hidden">Тип программы</legend>
-                <ul class="form__list">
-                  <li class="form__item">
-                    <input class="form__input-radio visually-hidden" id="lose-weight" type="radio" name="program-type" value="lose-weight" checked>
-                    <label class="form__label" for="lose-weight">Похудение</label>
-                  </li>
-                  <li class="form__item">
-                    <input class="form__input-radio visually-hidden" id="gain-weight" type="radio" name="program-type" value="gain-weight">
-                    <label class="form__label" for="gain-weight">Набор массы</label>
-                  </li>
-                  <li class="form__item">
-                    <input class="form__input-radio visually-hidden" id="need-advice" type="radio" name="program-type" value="need-advice">
-                    <label class="form__label" for="need-advice">Не знаю (Нужен ваш совет)</label>
-                  </li>
-                </ul>
-              </fieldset>
-            </div>
+          <div class="form__container wrapper">
+            <fieldset class="form__fieldset form__general-info">
+              <legend class="visually-hidden">Имя, возраст и вес кота</legend>
+              <ul class="form__list">
+                <li class="form__item">
+                  <label class="form__label" for="cat-name">Имя:*</label>
+                  <input class="form__input" id="cat-name" type="text" name="cat-name" placeholder="Барсик" required>
+                </li>
+                <li class="form__item">
+                  <label class="form__label" for="cat-weight">Вес (кг):*</label>
+                  <input class="form__input" id="cat-weight" type="number" name="cat-weight" min="0" max="100" placeholder="7" required>
+                </li>
+                <li class="form__item">
+                  <label class="form__label" for="cat-age">Возраст (лет):</label>
+                  <input class="form__input" id="cat-age" type="number" name="cat-age"  min="0" max="100" placeholder="7">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form__fieldset form__product-type">
+              <legend class="visually-hidden">Тип программы</legend>
+              <ul class="form__list">
+                <li class="form__item">
+                  <input class="form__input-radio visually-hidden" id="lose-weight" type="radio" name="program-type" value="lose-weight" checked>
+                  <label class="form__label" for="lose-weight">Похудение</label>
+                </li>
+                <li class="form__item">
+                  <input class="form__input-radio visually-hidden" id="gain-weight" type="radio" name="program-type" value="gain-weight">
+                  <label class="form__label" for="gain-weight">Набор массы</label>
+                </li>
+                <li class="form__item">
+                  <input class="form__input-radio visually-hidden" id="need-advice" type="radio" name="program-type" value="need-advice">
+                  <label class="form__label" for="need-advice">Не знаю (Нужен ваш совет)</label>
+                </li>
+              </ul>
+            </fieldset>
           </div>
           <fieldset class="form__fieldset form__contacts">
-            <div class="wrapper">
             <legend class="form__legend">Контактные данные (владельца кота)</legend>
-            <ul class="form__list">
-              <li class="form__item">
-                <label class="form__label" for="email">E-mail:*</label>
-                <input class="form__input" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-                <svg class="form__icon form__icon--email" width="19" height="14">
-                  <use xlink:href="img/sprite.svg#email"></use>
-                </svg>
-              </li>
-              <li class="form__item">
-                <label class="form__label" for="tel">Телефон:*</label>
-                <input class="form__input" id="tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
-                <svg class="form__icon form__icon--tel" width="20" height="21">
-                  <use xlink:href="img/sprite.svg#tel"></use>
-                </svg>
-              </li>
-            </ul>
-          </div>
+            <div class="wrapper">
+              <ul class="form__list">
+                <li class="form__item">
+                  <label class="form__label" for="email">E-mail:*</label>
+                  <input class="form__input" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                  <svg class="form__icon form__icon--email" width="19" height="14">
+                    <use xlink:href="img/sprite.svg#email"></use>
+                  </svg>
+                </li>
+                <li class="form__item">
+                  <label class="form__label" for="tel">Телефон:*</label>
+                  <input class="form__input" id="tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+                  <svg class="form__icon form__icon--tel" width="20" height="21">
+                    <use xlink:href="img/sprite.svg#tel"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
           </fieldset>
           <fieldset class="form__fieldset form__comments">
+            <legend class="form__legend">Комментарий</legend>
             <div class="wrapper">
-              <legend class="form__legend">Комментарий</legend>
               <label class="visually-hidden" for="comments">Комментарий</label>
               <textarea class="form__textarea" id="comments" name="comments" placeholder="Расскажите обо всех повaдках кота"></textarea>
             </div>
           </fieldset>
           <fieldset class="form__fieldset form__additions">
+            <legend class="form__legend">Дополнительно</legend>
             <div class="wrapper">
-              <legend class="form__legend">Дополнительно</legend>
               <ul class="form__list">
                 <li class="form__item">
                   <input class="form__input-checkbox visually-hidden" id="sweetener" type="checkbox" name="sweetener" checked>
@@ -143,7 +141,6 @@
               <button class="form__button button" type="submit">Отправить заявку</button>
               <p class="form__note">* — Обязательные поля</p>
             </div>
-          </div>
           </div>
         </form>
       </section>
