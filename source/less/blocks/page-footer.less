@@ -25,7 +25,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    padding-top: 15px;
+    padding-top: 23px;
     padding-bottom: 25px;
   }
 
@@ -34,12 +34,14 @@
   }
 }
 
-.page-footer__logo-name {
+.page-footer__logo {
   width: 128px;
   height: 24px;
-  margin-top: 40px;
+  margin-top: 35px;
   margin-bottom: 30px;
+}
 
+.page-footer__logo-state {
   &:hover,
   &:focus {
     opacity: 0.8;
@@ -68,8 +70,17 @@
   }
 }
 
-.page-footer__copyright:focus path,
-.page-footer__copyright:hover path {
+.page-footer__copyright-icon {
+  fill: @stroke-link-fb;
+}
+
+.page-footer__copyright-icon:hover,
+.page-footer__copyright-icon:focus {
+  fill: @basic-green;
+}
+
+.page-footer__copyright:hover .page-footer__copyright-icon,
+.page-footer__copyright:focus .page-footer__copyright-icon {
   fill: @basic-green;
 }
 
