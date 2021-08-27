@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Интернет-магазин «Кэт энерджи»</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/152.svg" type="image/svg+xml">
@@ -68,18 +68,14 @@
           <h2 class="visually-hidden">Типы программ</h2>
           <ul class="programs__list">
             <li class="programs__item programs__item--lose-fit">
-              <!-- псевдоэлемент с картинкой -->
               <h3 class="programs__title">Похудение</h3>
               <p class="programs__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
               <a class="programs__button" href="#">Каталог slim</a>
-              <!-- псевдоэлемент с картинкой -->
             </li>
             <li class="programs__item programs__item--gain-fit">
-              <!-- псевдоэлемент с картинкой -->
               <h3 class="programs__title">Набор массы</h3>
               <p class="programs__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
               <a class="programs__button" href="#">Каталог pro</a>
-              <!-- псевдоэлемент с картинкой -->
             </li>
           </ul>
         </div>
@@ -89,9 +85,7 @@
           <h2 class="scheme__title">Как это работает</h2>
           <ol class="scheme__list">
             <li class="scheme__item scheme__item--first">
-              <!-- псевдоэлемент с картинкой -->
               Функциональное питание содержит только полезные питательные вещества.
-              <!-- псевдоэлемент с порядковым номером -->
             </li>
             <li class="scheme__item scheme__item--second">
               Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
@@ -148,6 +142,8 @@
               </li>
               <li class="slider__item slider__item--after">
                 <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet.webp 1x, img/after-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/after-mobile.webp 1x, img/after-mobile@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/after-tablet.png 1x, img/after-tablet@2x.png 2x">
                   <img src="img/after-mobile.png" srcset="img/after-mobile@2x.png 2x" alt="Кот после функционального питания">
                 </picture>
@@ -228,21 +224,6 @@
       </section>
     </footer>
 
-    <script>
-      var navMain = document.querySelector('.nav');
-      var navToggle = document.querySelector('.nav__toggle');
-
-      navMain.classList.remove('nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('nav--closed')) {
-          navMain.classList.remove('nav--closed');
-          navMain.classList.add('nav--opened');
-        } else {
-          navMain.classList.add('nav--closed');
-          navMain.classList.remove('nav--opened');
-        }
-      });
-    </script>
+    <script src="js/menu.min.js"></script>
   </body>
 </html>

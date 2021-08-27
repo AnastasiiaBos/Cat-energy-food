@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Интернет-магазин «Кэт энерджи»</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/152.svg" type="image/svg+xml">
@@ -49,41 +49,43 @@
           </p>
         </div>
         <form class="main-form__form form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="form__container wrapper">
-            <fieldset class="form__fieldset form__general-info">
-              <legend class="visually-hidden">Имя, возраст и вес кота</legend>
-              <ul class="form__list">
-                <li class="form__item">
-                  <label class="form__label" for="cat-name">Имя:*</label>
-                  <input class="form__input" id="cat-name" type="text" name="cat-name" placeholder="Барсик" required>
-                </li>
-                <li class="form__item">
-                  <label class="form__label" for="cat-weight">Вес (кг):*</label>
-                  <input class="form__input" id="cat-weight" type="number" name="cat-weight" min="0" max="100" placeholder="7" required>
-                </li>
-                <li class="form__item">
-                  <label class="form__label" for="cat-age">Возраст (лет):</label>
-                  <input class="form__input" id="cat-age" type="number" name="cat-age"  min="0" max="100" placeholder="7">
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="form__fieldset form__product-type">
-              <legend class="visually-hidden">Тип программы</legend>
-              <ul class="form__list">
-                <li class="form__item">
-                  <input class="form__input-radio visually-hidden" id="lose-weight" type="radio" name="program-type" value="lose-weight" checked>
-                  <label class="form__label" for="lose-weight">Похудение</label>
-                </li>
-                <li class="form__item">
-                  <input class="form__input-radio visually-hidden" id="gain-weight" type="radio" name="program-type" value="gain-weight">
-                  <label class="form__label" for="gain-weight">Набор массы</label>
-                </li>
-                <li class="form__item">
-                  <input class="form__input-radio visually-hidden" id="need-advice" type="radio" name="program-type" value="need-advice">
-                  <label class="form__label" for="need-advice">Не знаю (Нужен ваш совет)</label>
-                </li>
-              </ul>
-            </fieldset>
+          <div class="wrapper">
+            <div class="form__container">
+              <fieldset class="form__fieldset form__general-info">
+                <legend class="visually-hidden">Имя, возраст и вес кота</legend>
+                <ul class="form__list">
+                  <li class="form__item">
+                    <label class="form__label" for="cat-name">Имя:*</label>
+                    <input class="form__input" id="cat-name" type="text" name="cat-name" placeholder="Барсик" required>
+                  </li>
+                  <li class="form__item">
+                    <label class="form__label" for="cat-weight">Вес (кг):*</label>
+                    <input class="form__input" id="cat-weight" type="number" name="cat-weight" min="0" max="100" placeholder="7" required>
+                  </li>
+                  <li class="form__item">
+                    <label class="form__label" for="cat-age">Возраст (лет):</label>
+                    <input class="form__input" id="cat-age" type="number" name="cat-age"  min="0" max="100" placeholder="7">
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="form__fieldset form__product-type">
+                <legend class="visually-hidden">Тип программы</legend>
+                <ul class="form__list">
+                  <li class="form__item">
+                    <input class="form__input-radio visually-hidden" id="lose-weight" type="radio" name="program-type" value="lose-weight" checked>
+                    <label class="form__label" for="lose-weight">Похудение</label>
+                  </li>
+                  <li class="form__item">
+                    <input class="form__input-radio visually-hidden" id="gain-weight" type="radio" name="program-type" value="gain-weight">
+                    <label class="form__label" for="gain-weight">Набор массы</label>
+                  </li>
+                  <li class="form__item">
+                    <input class="form__input-radio visually-hidden" id="need-advice" type="radio" name="program-type" value="need-advice">
+                    <label class="form__label" for="need-advice">Не знаю (Нужен ваш совет)</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
           </div>
           <fieldset class="form__fieldset form__contacts">
             <legend class="form__legend">Контактные данные (владельца кота)</legend>
@@ -208,21 +210,6 @@
       </section>
     </footer>
 
-    <script>
-      var navMain = document.querySelector('.nav');
-      var navToggle = document.querySelector('.nav__toggle');
-
-      navMain.classList.remove('nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('nav--closed')) {
-          navMain.classList.remove('nav--closed');
-          navMain.classList.add('nav--opened');
-        } else {
-          navMain.classList.add('nav--closed');
-          navMain.classList.remove('nav--opened');
-        }
-      });
-    </script>
+    <script src="js/menu.min.js"></script>
   </body>
 </html>
