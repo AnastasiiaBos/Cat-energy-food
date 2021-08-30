@@ -17,9 +17,8 @@
     position: absolute;
     content: "";
     top: 39px;
-    left: 20px;
-    right: -20px;
-    width: 100%;
+    right: 0;
+    width: calc(100% - 20px);
     height: 2px;
     background-color: @special-bg-green;
     z-index: -1;
@@ -27,6 +26,7 @@
     @media (min-width: @tablet-width) {
       top: 26px;
       left: 0;
+      width: 100%;
     }
 
     @media (min-width: @desktop-width) {

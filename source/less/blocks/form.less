@@ -239,13 +239,12 @@
   }
 }
 
-
 .form__contacts::before {
   content: "";
   position: absolute;
   top: -70px;
-  left: 20px;
-  width: 100%;
+  right: 0;
+  width: calc(100% - 20px);
   height: 2px;
   background-color: @special-bg-green;
   z-index: -1;
@@ -253,6 +252,7 @@
   @media (min-width: @tablet-width) {
     left: 0;
     top: -90px;
+    width: 100%;
   }
 }
 
@@ -357,15 +357,15 @@
   content: "";
   position: absolute;
   top: -48px;
-  left: 20px;
-  width: 100%;
+  right: 0;
+  width: calc(100% - 20px);
   height: 2px;
   background-color: @special-bg-green;
   z-index: -1;
 
   @media (min-width: @tablet-width) {
     top: -90px;
-    left: 0;
+    width: 100%;
   }
 }
 
@@ -429,15 +429,15 @@
   content: "";
   position: absolute;
   top: -49px;
-  left: 20px;
-  width: 100%;
+  right: 0;
+  width: calc(100% - 20px);
   height: 2px;
   background-color: @special-bg-green;
   z-index: -1;
 
   @media (min-width: @tablet-width) {
-    left: 0;
     top: -76px;
+    width: 100%;
   }
 }
 

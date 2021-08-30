@@ -1,4 +1,5 @@
-.slider {
+.slider__list {
+  .list-style-none ();
   display: block;
   width: 280px;
   margin: 0 auto;
@@ -12,11 +13,10 @@
 
 .slider__item--before {
   display: block;
-  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    left: 0;
+    left: 10px;
     top: 0;
     width: 50%;
     height: 100%;
@@ -24,13 +24,19 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 52%;
+    width: 52.5%;
+    left: -3px;
+  }
+}
+
+.slider__photo-before {
+  @media (max-width: @mobile-width-only) {
+    margin-left: -20px;
   }
 }
 
 .slider__item--after {
   display: none;
-  // margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     display: block;
@@ -46,7 +52,7 @@
 
   @media (min-width: @desktop-width) {
     left: 52%;
-    width: 41%;
+    width: 38%;
   }
 }
 

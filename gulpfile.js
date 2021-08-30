@@ -5,15 +5,15 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
-const imagemin = require('gulp-imagemin');
-const webp = require('gulp-webp');
-const svgstore = require('gulp-svgstore');
-const rename = require('gulp-rename');
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
+const rename = require("gulp-rename");
 const csso = require("postcss-csso");
 const htmlmin = require("gulp-htmlmin");
 const uglify = require("gulp-uglify-es").default;
 const del = require("del");
-var replace = require('gulp-string-replace');
+var replace = require("gulp-string-replace");
 
 // Styles
 const styles = () => {
@@ -110,7 +110,7 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,

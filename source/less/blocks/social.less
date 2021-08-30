@@ -11,13 +11,21 @@
 .social__list {
   .list-style-none ();
   display: flex;
-  justify-content: space-between;
-  width: 130px;
-  margin: 22px auto 18px;
+  width: 131px;
+  margin: 25px auto 16px;
 
   @media (min-width: @tablet-width) {
-    width: 129px;
+    width: 142px;
     align-items: center;
+    margin: 20px auto 16px;
+  }
+}
+
+.social__item:not(:last-child) {
+  margin-right: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 28px;
   }
 }
 
