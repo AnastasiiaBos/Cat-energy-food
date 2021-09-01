@@ -24,6 +24,11 @@
     width: 30px;
     height: 2px;
     background-color: @plus-catalog;
+
+    @media (min-width: @tablet-width) {
+      top: 80px;
+      width: 60px;
+    }
   }
 
   &::after {
@@ -33,6 +38,11 @@
     width: 2px;
     height: 30px;
     background-color: @plus-catalog;
+
+    @media (min-width: @tablet-width) {
+      top: 50px;
+      height: 60px;
+    }
   }
 }
 
@@ -46,7 +56,7 @@
 
   @media (min-width: @tablet-width) {
     width: 70%;
-    margin-bottom: 23px;
+    margin-bottom: 25px;
     font-size: 20px;
     line-height: 22px;
   }

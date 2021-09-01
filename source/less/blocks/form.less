@@ -29,7 +29,7 @@
   .list-style-none ();
 }
 
-.form__legend {
+.form__heading {
   .text-style-none ();
   font-size: 24px;
   line-height: 26px;
@@ -83,11 +83,11 @@
   border: 1px solid @special-border-desktop;
 
   &:hover {
-    border: 1px solid @special-border;
+    outline: 1px solid @special-border;
   }
 
   &:focus {
-    border: 2px solid @basic-dark-grey;
+    outline: 2px solid @basic-dark-grey;
   }
 
   @media (min-width: @tablet-width) {
@@ -98,7 +98,7 @@
 
 // При добавлении класса .error к инпуту в форме, меняется цвет бордера и иконки
 // .error {
-//   border: 2px solid @error;
+//   outline: 2px solid @error;
 // }
 
 // .error + .form__icon--email,
@@ -132,7 +132,7 @@
 
 .form__product-type {
   margin: 0 -20px;
-  padding: 27px 20px 24px 20px;
+  padding: 27px 20px 26px 20px;
   border-top: 1px solid @basic-border;
   border-bottom: 1px solid @basic-border;
 
@@ -230,19 +230,20 @@
   margin-bottom: 23.57px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 72px;
-    margin-bottom: 65px;
+    margin-top: 74px;
+    margin-bottom: 63px;
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 66px;
+    margin-bottom: 66px;
   }
 }
 
 .form__contacts::before {
   content: "";
   position: absolute;
-  top: -70px;
+  top: 15px;
   right: 0;
   width: calc(100% - 20px);
   height: 2px;
@@ -250,32 +251,30 @@
   z-index: -1;
 
   @media (min-width: @tablet-width) {
+    top: 22px;
     left: 0;
-    top: -90px;
     width: 100%;
   }
 }
 
-.form__contacts .form__legend {
+.form__contacts .form__heading {
   max-width: 187px;
-  margin-bottom: 35px;
-  margin-left: 20px;
+  margin-bottom: 34px;
   padding-right: 14px;
   background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
     max-width: 512px;
-    margin-left: 30px;
-    margin-bottom: 77px;
+    margin-bottom: 76px;
     padding-right: 42px;
     padding-left: 39px;
   }
 
   @media (min-width: @desktop-width) {
     min-width: 512px;
-    margin-left: 70px;
-    padding-left: 40px;
     padding-right: 40px;
+    margin-left: -40px;
+    padding-left: 40px;
   }
 }
 
@@ -351,12 +350,16 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 60px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 62px;
+  }
 }
 
 .form__comments::before {
   content: "";
   position: absolute;
-  top: -48px;
+  top: 15px;
   right: 0;
   width: calc(100% - 20px);
   height: 2px;
@@ -364,22 +367,20 @@
   z-index: -1;
 
   @media (min-width: @tablet-width) {
-    top: -90px;
+    top: 22px;
     width: 100%;
   }
 }
 
-.form__comments .form__legend {
+.form__comments .form__heading {
   max-width: 121px;
   margin-bottom: 38px;
-  margin-left: 20px;
   padding-right: 22px;
   background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
     max-width: 182px;
     margin-bottom: 76px;
-    margin-left: 30px;
     padding-right: 38px;
     padding-left: 39px;
   }
@@ -387,9 +388,8 @@
   @media (min-width: @desktop-width) {
     min-width: 182px;
     margin-bottom: 78px;
-    margin-left: 70px;
+    margin-left: -40px;
     padding-left: 40px;
-    padding-right: 40px;
   }
 }
 
@@ -428,7 +428,7 @@
 .form__additions::before {
   content: "";
   position: absolute;
-  top: -49px;
+  top: 15px;
   right: 0;
   width: calc(100% - 20px);
   height: 2px;
@@ -436,29 +436,27 @@
   z-index: -1;
 
   @media (min-width: @tablet-width) {
-    top: -76px;
+    top: 22px;
     width: 100%;
   }
 }
 
-.form__additions .form__legend {
+.form__additions .form__heading {
   max-width: 141px;
   margin-bottom: 38px;
-  margin-left: 20px;
   padding-right: 23px;
   background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
     max-width: 211px;
     margin-bottom: 62px;
-    margin-left: 30px;
     padding-right: 41px;
     padding-left: 39px;
   }
 
   @media (min-width: @desktop-width) {
     min-width: 212px;
-    margin-left: 70px;
+    margin-left: -40px;
     padding-left: 40px;
     padding-right: 40px;
   }
