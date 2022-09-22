@@ -23,10 +23,7 @@ const btnAfter = document.querySelector('.slider__button--after');
 
 toggleRange.addEventListener('input', () => {
   before.style.width = `${100 - toggleRange.value}%`;
-  console.log('before.style.width: '+before.style.width);
   after.style.width = `${toggleRange.value}%`;
-  console.log('after.style.width: '+after.style.width);
-
 })
 
 btnBefore.addEventListener('click', () => {
